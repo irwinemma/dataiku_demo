@@ -1,374 +1,430 @@
 {
-  "charts": [], 
-  "chartsEngine": "LINO", 
-  "explorationFilters": [], 
+  "columnsSelection": {
+    "mode": "ALL"
+  },
   "explorationSampling": {
-    "_refreshTrigger": 0, 
-    "autoRefreshSample": false, 
+    "_refreshTrigger": 0,
     "selection": {
-      "maxRecords": 30000, 
-      "partitionSelectionMethod": "ALL", 
-      "samplingMethod": "HEAD_SEQUENTIAL", 
-      "targetRatio": 0.02
-    }
-  }, 
+      "filter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "latestPartitionsN": 1,
+      "maxRecords": 30000,
+      "ordering": {
+        "rules": [],
+        "enabled": false
+      },
+      "withinFirstN": -1,
+      "partitionSelectionMethod": "ALL",
+      "maxStoredBytes": -1,
+      "targetRatio": 0.02,
+      "maxReadUncompressedBytes": -1,
+      "samplingMethod": "HEAD_SEQUENTIAL",
+      "timeout": -1
+    },
+    "autoRefreshSample": false
+  },
+  "explorationFilters": [],
+  "origin": "PREPARE_RECIPE",
   "exploreUIParams": {
     "autoRefresh": true
-  }, 
+  },
   "steps": [
     {
-      "disabled": false, 
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "FindReplace",
       "params": {
-        "appliesTo": "SINGLE_COLUMN", 
-        "columns": [
-          "Churn?"
-        ], 
-        "input": "Churn?", 
+        "output": "",
         "mapping": [
           {
-            "from": ".", 
+            "from": ".",
             "to": ""
           }
-        ], 
-        "matching": "SUBSTRING", 
-        "normalization": "EXACT", 
-        "output": "", 
-        "stopAfterFirstMatch": false
-      }, 
-      "preview": false, 
-      "type": "FindReplace"
-    }, 
+        ],
+        "normalization": "EXACT",
+        "columns": [
+          "Churn?"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "stopAfterFirstMatch": false,
+        "matching": "SUBSTRING"
+      },
+      "alwaysShowComment": false
+    },
     {
-      "disabled": false, 
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "TypeSetter",
       "params": {
-        "column": "State", 
+        "column": "State",
         "type": "Text"
-      }, 
-      "preview": false, 
-      "type": "TypeSetter"
-    }, 
+      },
+      "alwaysShowComment": false
+    },
     {
-      "disabled": false, 
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
       "params": {
-        "inCol": "Account Length", 
-        "outCol": "Account_Length", 
         "renamings": [
           {
-            "from": "Account Length", 
+            "from": "Account Length",
             "to": "Account_Length"
           }
         ]
-      }, 
-      "preview": false, 
-      "type": "ColumnRenamer"
-    }, 
+      },
+      "alwaysShowComment": false
+    },
     {
-      "disabled": false, 
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
       "params": {
-        "inCol": "Area Code", 
-        "outCol": "Area_Code", 
         "renamings": [
           {
-            "from": "Area Code", 
+            "from": "Area Code",
             "to": "Area_Code"
           }
         ]
-      }, 
-      "preview": false, 
-      "type": "ColumnRenamer"
-    }, 
+      },
+      "alwaysShowComment": false
+    },
     {
-      "disabled": false, 
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
       "params": {
-        "inCol": "Int'l Plan", 
-        "outCol": "Int'l_Plan", 
         "renamings": [
           {
-            "from": "Int'l Plan", 
-            "to": "Int'l_Plan"
+            "from": "Int\u0027l Plan",
+            "to": "Int\u0027l_Plan"
           }
         ]
-      }, 
-      "preview": false, 
-      "type": "ColumnRenamer"
-    }, 
+      },
+      "alwaysShowComment": false
+    },
     {
-      "disabled": false, 
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
       "params": {
-        "inCol": "VMail Plan", 
-        "outCol": "VMail_Plan", 
         "renamings": [
           {
-            "from": "VMail Plan", 
+            "from": "VMail Plan",
             "to": "VMail_Plan"
           }
         ]
-      }, 
-      "preview": false, 
-      "type": "ColumnRenamer"
-    }, 
+      },
+      "alwaysShowComment": false
+    },
     {
-      "disabled": false, 
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
       "params": {
-        "inCol": "VMail Message", 
-        "outCol": "VMail_Message", 
         "renamings": [
           {
-            "from": "VMail Message", 
+            "from": "VMail Message",
             "to": "VMail_Message"
           }
         ]
-      }, 
-      "preview": false, 
-      "type": "ColumnRenamer"
-    }, 
+      },
+      "alwaysShowComment": false
+    },
     {
-      "disabled": false, 
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
       "params": {
-        "inCol": "Day Mins", 
-        "outCol": "Day_Mins", 
         "renamings": [
           {
-            "from": "Day Mins", 
+            "from": "Day Mins",
             "to": "Day_Mins"
           }
         ]
-      }, 
-      "preview": false, 
-      "type": "ColumnRenamer"
-    }, 
+      },
+      "alwaysShowComment": false
+    },
     {
-      "disabled": false, 
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
       "params": {
-        "inCol": "Day Calls", 
-        "outCol": "Day_Calls", 
         "renamings": [
           {
-            "from": "Day Calls", 
+            "from": "Day Calls",
             "to": "Day_Calls"
           }
         ]
-      }, 
-      "preview": false, 
-      "type": "ColumnRenamer"
-    }, 
+      },
+      "alwaysShowComment": false
+    },
     {
-      "disabled": false, 
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
       "params": {
-        "inCol": "Day Charge", 
-        "outCol": "Day_Charge", 
         "renamings": [
           {
-            "from": "Day Charge", 
+            "from": "Day Charge",
             "to": "Day_Charge"
           }
         ]
-      }, 
-      "preview": false, 
-      "type": "ColumnRenamer"
-    }, 
+      },
+      "alwaysShowComment": false
+    },
     {
-      "disabled": false, 
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
       "params": {
-        "inCol": "Eve Mins", 
-        "outCol": "Eve_Mins", 
         "renamings": [
           {
-            "from": "Eve Mins", 
+            "from": "Eve Mins",
             "to": "Eve_Mins"
           }
         ]
-      }, 
-      "preview": false, 
-      "type": "ColumnRenamer"
-    }, 
+      },
+      "alwaysShowComment": false
+    },
     {
-      "disabled": false, 
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
       "params": {
-        "inCol": "Eve Calls", 
-        "outCol": "Eve_Calls", 
         "renamings": [
           {
-            "from": "Eve Calls", 
+            "from": "Eve Calls",
             "to": "Eve_Calls"
           }
         ]
-      }, 
-      "preview": false, 
-      "type": "ColumnRenamer"
-    }, 
+      },
+      "alwaysShowComment": false
+    },
     {
-      "disabled": false, 
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
       "params": {
-        "inCol": "Eve Charge", 
-        "outCol": "Eve_Charge", 
         "renamings": [
           {
-            "from": "Eve Charge", 
+            "from": "Eve Charge",
             "to": "Eve_Charge"
           }
         ]
-      }, 
-      "preview": false, 
-      "type": "ColumnRenamer"
-    }, 
+      },
+      "alwaysShowComment": false
+    },
     {
-      "disabled": false, 
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
       "params": {
-        "inCol": "Night Mins", 
-        "outCol": "Night_Mins", 
         "renamings": [
           {
-            "from": "Night Mins", 
+            "from": "Night Mins",
             "to": "Night_Mins"
           }
         ]
-      }, 
-      "preview": false, 
-      "type": "ColumnRenamer"
-    }, 
+      },
+      "alwaysShowComment": false
+    },
     {
-      "disabled": false, 
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
       "params": {
-        "inCol": "Night Calls", 
-        "outCol": "Night_Calls", 
         "renamings": [
           {
-            "from": "Night Calls", 
+            "from": "Night Calls",
             "to": "Night_Calls"
           }
         ]
-      }, 
-      "preview": false, 
-      "type": "ColumnRenamer"
-    }, 
+      },
+      "alwaysShowComment": false
+    },
     {
-      "disabled": false, 
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
       "params": {
-        "inCol": "Night Charge", 
-        "outCol": "Night_Charge", 
         "renamings": [
           {
-            "from": "Night Charge", 
+            "from": "Night Charge",
             "to": "Night_Charge"
           }
         ]
-      }, 
-      "preview": false, 
-      "type": "ColumnRenamer"
-    }, 
+      },
+      "alwaysShowComment": false
+    },
     {
-      "disabled": false, 
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
       "params": {
-        "inCol": "Intl Mins", 
-        "outCol": "Intl_Mins", 
         "renamings": [
           {
-            "from": "Intl Mins", 
+            "from": "Intl Mins",
             "to": "Intl_Mins"
           }
         ]
-      }, 
-      "preview": false, 
-      "type": "ColumnRenamer"
-    }, 
+      },
+      "alwaysShowComment": false
+    },
     {
-      "disabled": false, 
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
       "params": {
-        "inCol": "Intl Calls", 
-        "outCol": "Intl_Calls", 
         "renamings": [
           {
-            "from": "Intl Calls", 
+            "from": "Intl Calls",
             "to": "Intl_Calls"
           }
         ]
-      }, 
-      "preview": false, 
-      "type": "ColumnRenamer"
-    }, 
+      },
+      "alwaysShowComment": false
+    },
     {
-      "disabled": false, 
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
       "params": {
-        "inCol": "Intl Charge", 
-        "outCol": "Intl_Charge", 
         "renamings": [
           {
-            "from": "Intl Charge", 
+            "from": "Intl Charge",
             "to": "Intl_Charge"
           }
         ]
-      }, 
-      "preview": false, 
-      "type": "ColumnRenamer"
-    }, 
+      },
+      "alwaysShowComment": false
+    },
     {
-      "disabled": false, 
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
       "params": {
-        "inCol": "CustServ Calls", 
-        "outCol": "CustServ_Calls", 
         "renamings": [
           {
-            "from": "CustServ Calls", 
+            "from": "CustServ Calls",
             "to": "CustServ_Calls"
           }
         ]
-      }, 
-      "preview": false, 
-      "type": "ColumnRenamer"
-    }, 
+      },
+      "alwaysShowComment": false
+    },
     {
-      "disabled": false, 
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
       "params": {
-        "inCol": "Churn?", 
-        "outCol": "Churn", 
         "renamings": [
           {
-            "from": "Churn?", 
+            "from": "Churn?",
             "to": "Churn"
           }
         ]
-      }, 
-      "preview": false, 
-      "type": "ColumnRenamer"
-    }, 
+      },
+      "alwaysShowComment": false
+    },
     {
-      "disabled": false, 
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
       "params": {
-        "inCol": "Int'l_Plan", 
-        "outCol": "Intl_Plan", 
         "renamings": [
           {
-            "from": "Int'l_Plan", 
+            "from": "Int\u0027l_Plan",
             "to": "Intl_Plan"
           }
         ]
-      }, 
-      "preview": false, 
-      "type": "ColumnRenamer"
-    }, 
+      },
+      "alwaysShowComment": false
+    },
     {
-      "disabled": false, 
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
       "params": {
-        "column": "total_Mins", 
-        "expression": "Day_Mins + Eve_Mins + Night_Mins + Intl_Mins"
-      }, 
-      "preview": false, 
-      "type": "CreateColumnWithGREL"
-    }, 
+        "expression": "Day_Mins + Eve_Mins + Night_Mins + Intl_Mins",
+        "column": "total_Mins"
+      },
+      "alwaysShowComment": false
+    },
     {
-      "disabled": false, 
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
       "params": {
-        "column": "Total_Charge", 
-        "expression": "Day_Charge + Eve_Charge + Night_Charge + Intl_Charge"
-      }, 
-      "preview": false, 
-      "type": "CreateColumnWithGREL"
+        "expression": "Day_Charge + Eve_Charge + Night_Charge + Intl_Charge",
+        "column": "Total_Charge"
+      },
+      "alwaysShowComment": false
     }
-  ], 
-  "tags": [], 
+  ],
+  "maxProcessedMemTableBytes": -1,
+  "previewMode": "ALL_ROWS",
   "vizSampling": {
-    "_refreshTrigger": 0, 
+    "_refreshTrigger": 0,
     "autoRefreshSample": false
+  },
+  "analysisColumnData": {},
+  "columnWidthsByName": {
+    "Night_Charge": 134,
+    "Intl_Mins": 113,
+    "Day_Mins": 106,
+    "Area_Code": 100,
+    "Account_Length": 120,
+    "Intl_Charge": 127,
+    "Eve_Mins": 106,
+    "Eve_Calls": 100,
+    "Eve_Charge": 120,
+    "Intl_Plan": 100,
+    "Night_Mins": 120,
+    "Churn": 100,
+    "Intl_Calls": 100,
+    "Night_Calls": 100,
+    "CustServ_Calls": 120,
+    "State": 100,
+    "Phone": 100,
+    "VMail_Plan": 100,
+    "VMail_Message": 113,
+    "Day_Calls": 100,
+    "Total_Charge": 141,
+    "Day_Charge": 120,
+    "total_Mins": 141
+  },
+  "sorting": [],
+  "globalSearchQuery": "",
+  "coloring": {
+    "scheme": "MEANING_AND_STATUS",
+    "individualColumns": [],
+    "valueColoringMode": "HASH"
   }
 }
