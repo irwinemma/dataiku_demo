@@ -2,15 +2,25 @@
   "projectExportManifest": {
     "exportUploads": false,
     "exportAllInputDatasets": false,
-    "exportAllDatasets": false,
-    "exportManagedFS": false,
+    "exportAllDatasets": true,
+    "exportManagedFS": true,
     "exportAnalysisModels": false,
-    "exportSavedModels": false,
+    "exportSavedModels": true,
     "exportManagedFolders": false,
     "exportAllInputManagedFolders": false,
     "exportInsightsData": false,
-    "includedDatasetsData": [],
-    "includedSavedModels": [],
+    "includedDatasetsData": [
+      {
+        "name": "customers",
+        "type": "UploadedFiles"
+      }
+    ],
+    "includedSavedModels": [
+      {
+        "id": "5HExUjQ1",
+        "name": "Churn prediction model ( RANDOM_FOREST)"
+      }
+    ],
     "includedManagedFolders": [],
     "exportGitRepository": false
   },
@@ -21,7 +31,25 @@
     "showVersionControlFeatures": false
   },
   "useAppHomepage": true,
-  "homepageSections": [],
+  "homepageSections": [
+    {
+      "sectionTitle": "SCORE AGAINST NEW DATA",
+      "sectionText": "Drag and Drop CSV file into the portal to score the data.",
+      "tiles": [
+        {
+          "datasetName": "customers",
+          "behavior": "INLINE_UPLOAD_REDETECT_AND_INFER",
+          "type": "UPLOAD_DATASET_SET_FILE",
+          "prompt": "Upload data"
+        },
+        {
+          "dashboardId": "4A29MtD",
+          "type": "DASHBOARD_LINK",
+          "prompt": "Display the dashboard"
+        }
+      ]
+    }
+  ],
   "label": "Predicting churn",
   "shortDesc": "The template *Predicting churn* was created by Administrator on Sep 22nd 2020",
   "tags": [],
