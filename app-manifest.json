@@ -25,5 +25,5 @@
   "label": "Predicting churn",
   "shortDesc": "The template *Predicting churn* was created by Administrator on Sep 22nd 2020",
   "tags": [],
-  "instantiationPermission": "USE_APP_MASTER_PERMISSIONS"
+  "instantiationPermission": "EVERYBODY"
 }
