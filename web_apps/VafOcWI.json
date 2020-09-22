@@ -40,11 +40,11 @@
   "name": "Ortho Clinical Webapp",
   "apiKey": "YNaA4oVwJPsWETYvAwfCKweRhDGOXMxD",
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600786810746
+    "lastModifiedOn": 1600786833352
   },
   "creationTag": {
     "versionNumber": 0,
