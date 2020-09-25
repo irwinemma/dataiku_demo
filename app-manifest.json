@@ -46,6 +46,11 @@
           "dashboardId": "4A29MtD",
           "type": "DASHBOARD_LINK",
           "prompt": "Display the dashboard"
+        },
+        {
+          "scenarioId": "AUTOMATEMODELRETRAINING",
+          "type": "SCENARIO_RUN",
+          "prompt": "Train the prediction model"
         }
       ]
     }
