@@ -2429,26 +2429,26 @@
             "isA": "dimension",
             "possibleSorts": [
               {
-                "sortAscending": true,
                 "type": "NATURAL",
-                "label": "Natural ordering"
+                "label": "Natural ordering",
+                "sortAscending": true
               },
               {
-                "measureIdx": 0,
                 "type": "AGGREGATION",
+                "measureIdx": 0,
                 "label": "Count of records, descending"
               },
               {
-                "sortAscending": true,
                 "type": "AGGREGATION",
+                "measureIdx": 0,
                 "label": "Count of records, ascending",
-                "measureIdx": 0
+                "sortAscending": true
               }
             ],
             "sort": {
-              "sortAscending": true,
               "type": "NATURAL",
-              "label": "Natural ordering"
+              "label": "Natural ordering",
+              "sortAscending": true
             }
           }
         ],
