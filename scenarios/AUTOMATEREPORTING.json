@@ -5,11 +5,11 @@
   "name": "Automate Reporting",
   "active": false,
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1602699781162
+    "lastModifiedOn": 1602699869117
   },
   "checklists": {
     "checklists": []
@@ -20,10 +20,96 @@
     "suppressTriggersWhileRunning": true
   },
   "tags": [],
-  "triggers": [],
-  "reporters": [],
+  "triggers": [
+    {
+      "id": "jTLxYrGr",
+      "type": "temporal",
+      "delay": 5,
+      "active": true,
+      "params": {
+        "frequency": "Monthly",
+        "daysOfWeek": [
+          "Saturday"
+        ],
+        "dayOfMonth": 1,
+        "minute": 0,
+        "hour": 2,
+        "count": 5
+      }
+    }
+  ],
+  "reporters": [
+    {
+      "active": true,
+      "messaging": {
+        "type": "slack-scenario",
+        "configuration": {
+          "message": "DSS Scenario \u003c${scenarioRunURL}|${scenarioName}\u003e triggered by ${triggerName} : ${outcome} ${if(outcome \u003d\u003d \u0027SUCCESS\u0027, \u0027:white_check_mark:\u0027, \u0027\u0027)}${if(outcome \u003d\u003d \u0027FAILED\u0027, \u0027:red_circle:\u0027, \u0027\u0027)}${if(outcome \u003d\u003d \u0027WARNING\u0027, \u0027:red_circle:\u0027, \u0027\u0027)}${if(outcome \u003d\u003d \u0027\u0027 || outcome \u003d\u003d \u0027N/A\u0027, \u0027:bell:\u0027, \u0027\u0027)}",
+          "messageMode": "TEXT_MESSAGE",
+          "blocks": "[\n    {\n        \"type\": \"section\",\n        \"text\": {\n            \"type\": \"mrkdwn\",\n            \"text\": \"*DSS Scenario \u003c${scenarioRunURL}|${scenarioName}\u003e:* ${outcome} ${if(outcome \u003d\u003d \u0027SUCCESS\u0027, \u0027:white_check_mark:\u0027, \u0027\u0027)}${if(outcome \u003d\u003d \u0027FAILED\u0027, \u0027:red_circle:\u0027, \u0027\u0027)}${if(outcome \u003d\u003d \u0027WARNING\u0027, \u0027:red_circle:\u0027, \u0027\u0027)}${if(outcome \u003d\u003d \u0027\u0027 || outcome \u003d\u003d \u0027N/A\u0027, \u0027:bell:\u0027, \u0027\u0027)}\"\n        }\n    },\n    {\n        \"type\": \"context\",\n        \"elements\": [\n            {\n                \"type\": \"mrkdwn\",\n                \"text\": \"Triggered by ${triggerName}\"\n            }\n        ]\n    }\n]\n",
+          "mode": "WEBHOOK",
+          "useProxy": true,
+          "asUser": false,
+          "linkNames": false
+        }
+      },
+      "id": "HVzcOHD7",
+      "runConditionEnabled": true,
+      "runCondition": "outcome !\u003d \u0027SUCCESS\u0027",
+      "phase": "END"
+    }
+  ],
   "params": {
-    "steps": []
+    "steps": [
+      {
+        "id": "refresh_chart_cache_4A29MtD",
+        "type": "refresh_chart_cache",
+        "name": "Step #1",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "force": false,
+          "dashboards": [
+            {
+              "smartName": "4A29MtD",
+              "name": "Forecasting Customers that are likely to churn"
+            }
+          ],
+          "proceedOnFailure": false
+        }
+      },
+      {
+        "id": "create_dashboard_export_null",
+        "type": "create_dashboard_export",
+        "name": "Step #2",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "exportFormat": {
+            "paperSize": "A4",
+            "orientation": "LANDSCAPE",
+            "fileType": "PDF",
+            "width": 1920,
+            "height": 1358
+          },
+          "proceedOnFailure": false
+        }
+      }
+    ]
   },
   "automationLocal": false,
   "customFields": {}
