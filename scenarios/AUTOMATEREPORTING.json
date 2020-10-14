@@ -3,13 +3,13 @@
   "id": "AUTOMATEREPORTING",
   "type": "step_based",
   "name": "Automate Reporting",
-  "active": false,
+  "active": true,
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1602699869117
+    "lastModifiedOn": 1602699894711
   },
   "checklists": {
     "checklists": []
