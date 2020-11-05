@@ -63,7 +63,7 @@
       }
     ],
     "projectPrivileges": {
-      "admin": false,
+      "admin": true,
       "readProjectContent": false,
       "writeProjectContent": false,
       "exportDatasetsData": false,
