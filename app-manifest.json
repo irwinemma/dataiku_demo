@@ -44,6 +44,16 @@
           "scenarioId": "AUTOMATEMODELRETRAINING",
           "type": "SCENARIO_RUN",
           "prompt": "Retrain the model"
+        }
+      ]
+    },
+    {
+      "sectionTitle": "Output",
+      "tiles": [
+        {
+          "dashboardId": "4A29MtD",
+          "type": "DASHBOARD_LINK",
+          "prompt": "View a dashboard with outputs from the model"
         },
         {
           "datasetName": "revenue_loss",
@@ -107,7 +117,7 @@
             }
           },
           "type": "DOWNLOAD_DATASET",
-          "prompt": "Download the dataset"
+          "prompt": "Download a dataset with results of revenue lost..."
         }
       ]
     }
