@@ -1,7 +1,67 @@
 [
   {
     "execSQLLike": false,
-    "localDatasets": [],
+    "localDatasets": [
+      {
+        "datasets": [
+          "customers"
+        ],
+        "privileges": [
+          "READ_DATA",
+          "WRITE_METADATA"
+        ]
+      },
+      {
+        "datasets": [
+          "customers_prepared"
+        ],
+        "privileges": [
+          "READ_DATA",
+          "WRITE_METADATA"
+        ]
+      },
+      {
+        "datasets": [
+          "customers_within_segments"
+        ],
+        "privileges": [
+          "READ_DATA",
+          "WRITE_METADATA"
+        ]
+      },
+      {
+        "datasets": [
+          "revenue_loss"
+        ],
+        "privileges": [
+          "WRITE_METADATA"
+        ]
+      },
+      {
+        "datasets": [
+          "unlabeled_customers"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "unlabeled_customers_churn_prediction"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "unlabeled_customers_prepared"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "unlabeled_customers_within_segments"
+        ],
+        "privileges": []
+      }
+    ],
     "projectPrivileges": {
       "admin": false,
       "readProjectContent": false,
