@@ -38,7 +38,7 @@
       "tiles": [
         {
           "type": "INLINE_DATASET_EDIT",
-          "prompt": "Choose a dataset"
+          "prompt": "Choose the dataset and features needed to train the model:"
         },
         {
           "scenarioId": "AUTOMATEMODELRETRAINING",
