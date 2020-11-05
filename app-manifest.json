@@ -33,13 +33,9 @@
   "useAppHomepage": true,
   "homepageSections": [
     {
-      "sectionTitle": "Select the features",
+      "sectionTitle": "Select the features and retrain the model",
       "sectionText": "Choose from the column names in the existing dataset, these features will be used for the model training.",
       "tiles": [
-        {
-          "type": "INLINE_DATASET_EDIT",
-          "prompt": "Choose the dataset and features needed to train the model:"
-        },
         {
           "scenarioId": "AUTOMATEMODELRETRAINING",
           "type": "SCENARIO_RUN",
