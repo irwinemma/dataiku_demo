@@ -33,7 +33,7 @@
   "useAppHomepage": true,
   "homepageSections": [
     {
-      "sectionTitle": "Select your own features",
+      "sectionTitle": "Train a model with your selected features",
       "sectionText": "Choose from the column names in the existing dataset, these features will be used for the model training.",
       "tiles": [
         {
