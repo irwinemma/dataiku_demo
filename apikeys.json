@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "execSQLLike": false,
+    "localDatasets": [],
+    "projectPrivileges": {
+      "admin": false,
+      "readProjectContent": false,
+      "writeProjectContent": false,
+      "exportDatasetsData": false,
+      "readDashboards": false,
+      "writeDashboards": false,
+      "moderateDashboards": false,
+      "runScenarios": false,
+      "manageDashboardAuthorizations": false,
+      "manageExposedElements": false,
+      "manageAdditionalDashboardUsers": false,
+      "executeApp": false
+    },
+    "onBehalf": "lJgKk2S",
+    "id": "Jss22p0SyO9hMzH8",
+    "key": "iuvfP1b5641ElRF2yBohWQRZJHHWGaUl",
+    "label": "Key for Web app Feature Selection(lJgKk2S)",
+    "createdOn": 1604617580693
+  }
+]
