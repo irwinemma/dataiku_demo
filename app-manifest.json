@@ -33,7 +33,7 @@
   "useAppHomepage": true,
   "homepageSections": [
     {
-      "sectionTitle": "Train a model with your selected features",
+      "sectionTitle": "Select the features",
       "sectionText": "Choose from the column names in the existing dataset, these features will be used for the model training.",
       "tiles": [
         {
@@ -122,7 +122,7 @@
       ]
     }
   ],
-  "label": "Predicting Churn - Feature Selection App",
+  "label": "Predicting Churn - Train a model with your selected features",
   "shortDesc": "The template *Predicting churn* was created by Administrator on Sep 22nd 2020",
   "tags": [],
   "instantiationPermission": "EVERYBODY"
