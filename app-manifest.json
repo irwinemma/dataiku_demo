@@ -1,7 +1,7 @@
 {
   "projectExportManifest": {
     "exportUploads": false,
-    "exportAllInputDatasets": false,
+    "exportAllInputDatasets": true,
     "exportAllDatasets": true,
     "exportManagedFS": true,
     "exportAnalysisModels": false,
@@ -33,27 +33,20 @@
   "useAppHomepage": true,
   "homepageSections": [
     {
-      "sectionTitle": "SCORE AGAINST NEW DATA",
-      "sectionText": "Drag and Drop CSV file into the portal to score the data.",
+      "sectionTitle": "Select your own features",
+      "sectionText": "Choose from the column names in the existing dataset, these features will be used for the model training.",
       "tiles": [
         {
-          "datasetName": "customers",
-          "behavior": "INLINE_UPLOAD_REDETECT_AND_INFER",
-          "type": "UPLOAD_DATASET_SET_FILE",
-          "prompt": "Upload data"
-        },
-        {
-          "dashboardId": "4A29MtD",
-          "type": "DASHBOARD_LINK",
-          "prompt": "Display the dashboard"
+          "type": "INLINE_DATASET_EDIT",
+          "prompt": "Choose a dataset"
         },
         {
           "scenarioId": "AUTOMATEMODELRETRAINING",
           "type": "SCENARIO_RUN",
-          "prompt": "Train the prediction model"
+          "prompt": "Retrain the model"
         },
         {
-          "datasetName": "unlabeled_customers_churn_prediction",
+          "datasetName": "revenue_loss",
           "exportParams": {
             "destinationType": "DOWNLOAD",
             "temporaryFileBehavior": "AUTO",
@@ -114,12 +107,12 @@
             }
           },
           "type": "DOWNLOAD_DATASET",
-          "prompt": "Download the prediction results"
+          "prompt": "Download the dataset"
         }
       ]
     }
   ],
-  "label": "Predicting churn",
+  "label": "Predicting Churn - Feature Selection App",
   "shortDesc": "The template *Predicting churn* was created by Administrator on Sep 22nd 2020",
   "tags": [],
   "instantiationPermission": "EVERYBODY"
