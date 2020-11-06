@@ -37,6 +37,12 @@
       "sectionText": "Choose from the column names in the existing dataset, these features will be used for the model training.",
       "tiles": [
         {
+          "datasetName": "unlabeled_customers_prepared",
+          "behavior": "GO_TO_DATASET",
+          "type": "FILES_BASED_DATASET_BROWSE_AND_PREVIEW",
+          "prompt": "Look at the dataset"
+        },
+        {
           "scenarioId": "AUTOMATEMODELRETRAINING",
           "type": "SCENARIO_RUN",
           "prompt": "Retrain the model"
