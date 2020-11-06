@@ -24,14 +24,6 @@ function dataikuREST(path, callback) {
         });
 }
 
-function displayMessage(messageText, messageClassname) {
-    let messageContainer = document.getElementById('message');
-    messageContainer.innerHTML = messageText;
-    messageContainer.className = '';
-    if (messageClassname && messageClassname.length > 0) {
-        messageContainer.className = messageClassname;
-    }
-}
 
 let datasetSelector = document.getElementById('datasets-list');
 datasetSelector.onchange = function(event) {
