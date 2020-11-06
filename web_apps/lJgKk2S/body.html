@@ -2,12 +2,31 @@
 
 <link rel="stylesheet" href="/static/public/styles/1.0.0/dku-styles.css" />
 
-<h1>Dataiku REST API advanced usage</h1>
-<h2>First example : change the API Key and list the values of a dataset's column</h2>
+<h1>Dataiku + JnJ Webapp for Feature Selection</h1>
+<h2>Select which dataset and features to use in the model generation</h2>
 <div class="columns-listing-container">
     <section>
        
         <h3>Choose a dataset and see its columns</h3>
+        <form id="form-datasets" novalidate>
+            <div class="field">
+                <label for="dataset-name">Dataset Name</label>
+                <select class="dropdown" id="datasets-list" name="datasets-name">
+                    <option value="" selected hidden>Pick a dataset...</option>
+                </select>
+            </div>
+        </form>
+    </section>
+
+    <section class="results">
+        <span id="message">Results will appear here.</span>
+    </section>
+</div>
+
+<div class="columns-listing-container">
+    <section>
+       
+        <h3>Choose a set of features to include</h3>
         <form id="form-datasets" novalidate>
             <div class="field">
                 <label for="dataset-name">Dataset Name</label>

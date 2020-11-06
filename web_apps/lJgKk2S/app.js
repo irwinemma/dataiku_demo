@@ -66,3 +66,4 @@ dataiku.listDatasets(
         displayMessage('The datasets cannot be retrieved. Please check your API Key.', 'error-message');
     }
 );
+
