@@ -3,6 +3,27 @@
  * https://doc.dataiku.com/dss/latest/api/js/index.html
  */
 
+// Most of the Dataiku Rest API is not wrapped in JavaScript
+// Check the documentation: https://doc.dataiku.com/dss/api/7.0/rest (replace 7.0 by the corresponding DSS version)
+function dataikuREST(path, callback) {
+    let url = '/public/api' + path;
+    // We use fetch API (https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch)
+    fetch(url, {
+        headers: {
+            'Authorization': 'Basic ' + btoa(dataiku.defaultAPIKey + ':' + '')
+        }
+    })
+        .then(response => {
+            if (response.ok) {
+                response.json().then(callback);
+            } else {
+                response.json().then(
+                    err => displayMessage(err.message, 'error-message')
+                );
+            }
+        });
+}
+
 function displayMessage(messageText, messageClassname) {
     let messageContainer = document.getElementById('message');
     messageContainer.innerHTML = messageText;
@@ -28,26 +49,7 @@ datasetSelector.onchange = function(event) {
     })
 }
 
-// Most of the Dataiku Rest API is not wrapped in JavaScript
-// Check the documentation: https://doc.dataiku.com/dss/api/7.0/rest (replace 7.0 by the corresponding DSS version)
-function dataikuREST(path, callback) {
-    let url = '/public/api' + path;
-    // We use fetch API (https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch)
-    fetch(url, {
-        headers: {
-            'Authorization': 'Basic ' + btoa(dataiku.defaultAPIKey + ':' + '')
-        }
-    })
-        .then(response => {
-            if (response.ok) {
-                response.json().then(callback);
-            } else {
-                response.json().then(
-                    err => displayMessage(err.message, 'error-message')
-                );
-            }
-        });
-}
+
 
 dataiku.listDatasets(
     function(datasets) { // success
@@ -66,4 +68,6 @@ dataiku.listDatasets(
         displayMessage('The datasets cannot be retrieved. Please check your API Key.', 'error-message');
     }
 );
+
+
 
