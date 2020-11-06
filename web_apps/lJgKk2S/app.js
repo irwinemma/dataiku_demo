@@ -48,8 +48,6 @@ datasetSelector.onchange = function(event) {
     })
 }
 
-
-
 dataiku.listDatasets(
     function(datasets) { // success
         // iterate through the datasets list to populate the select:
