@@ -38,7 +38,7 @@
       "tiles": [
         {
           "datasetName": "unlabeled_customers_prepared",
-          "behavior": "GO_TO_DATASET",
+          "behavior": "INLINE_BROWSE_ONLY",
           "type": "FILES_BASED_DATASET_BROWSE_AND_PREVIEW",
           "prompt": "Look at the dataset"
         },
