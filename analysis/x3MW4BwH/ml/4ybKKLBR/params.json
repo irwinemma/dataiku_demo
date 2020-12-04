@@ -559,7 +559,8 @@
     },
     "kmeans_clustering": {
       "k": [
-        5
+        5,
+        2
       ],
       "enabled": true,
       "seed": 1337,
@@ -578,7 +579,7 @@
         5,
         2
       ],
-      "enabled": true,
+      "enabled": false,
       "max_iterations": 100,
       "seed": 1337
     },
