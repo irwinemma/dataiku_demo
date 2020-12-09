@@ -18,7 +18,7 @@
     ],
     "infra": {
       "containerSelection": {
-        "containerMode": "INHERIT"
+        "containerMode": "NONE"
       },
       "overrideGlobalK8sExposition": false,
       "exposition": {
@@ -45,11 +45,11 @@
   "name": "emma",
   "apiKey": "zJx69JLy8jSwshUWTt8WKfMOzhmrkhao",
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1604692032404
+    "lastModifiedOn": 1607535500320
   },
   "creationTag": {
     "versionNumber": 0,
