@@ -81,37 +81,5 @@
     "key": "iuvfP1b5641ElRF2yBohWQRZJHHWGaUl",
     "label": "Key for Web app Feature Selection(lJgKk2S)",
     "createdOn": 1604617580693
-  },
-  {
-    "execSQLLike": false,
-    "localDatasets": [
-      {
-        "datasets": [],
-        "privileges": [
-          "READ_DATA",
-          "READ_METADATA",
-          "READ_SCHEMA"
-        ]
-      }
-    ],
-    "projectPrivileges": {
-      "admin": false,
-      "readProjectContent": false,
-      "writeProjectContent": false,
-      "exportDatasetsData": false,
-      "readDashboards": false,
-      "writeDashboards": false,
-      "moderateDashboards": false,
-      "runScenarios": false,
-      "manageDashboardAuthorizations": false,
-      "manageExposedElements": false,
-      "manageAdditionalDashboardUsers": false,
-      "executeApp": false
-    },
-    "onBehalf": "Q3TlunF",
-    "id": "SeD4H9HMuXgtKvIg",
-    "key": "zJx69JLy8jSwshUWTt8WKfMOzhmrkhao",
-    "label": "Key for Web app emma(Q3TlunF)",
-    "createdOn": 1604692032373
   }
 ]
