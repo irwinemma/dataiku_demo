@@ -148,7 +148,7 @@
       },
       "State": {
         "category_handling": "DUMMIFY",
-        "missing_handling": "NONE",
+        "missing_handling": "DROP_ROW",
         "missing_impute_with": "MODE",
         "dummy_clip": "MAX_NB_CATEGORIES",
         "cumulative_proportion": 0.95,
@@ -160,7 +160,7 @@
         "role": "INPUT",
         "type": "CATEGORY",
         "state": {
-          "userModified": false,
+          "userModified": true,
           "autoModifiedByDSS": false,
           "recordedMeaning": "USStateMeaning"
         },
@@ -451,7 +451,7 @@
       },
       "Intl_Plan": {
         "category_handling": "DUMMIFY",
-        "missing_handling": "NONE",
+        "missing_handling": "DROP_ROW",
         "missing_impute_with": "MODE",
         "dummy_clip": "MAX_NB_CATEGORIES",
         "cumulative_proportion": 0.95,
@@ -463,7 +463,7 @@
         "role": "INPUT",
         "type": "CATEGORY",
         "state": {
-          "userModified": false,
+          "userModified": true,
           "autoModifiedByDSS": false,
           "recordedMeaning": "Boolean"
         },
@@ -510,7 +510,7 @@
       },
       "cluster_labels": {
         "category_handling": "DUMMIFY",
-        "missing_handling": "NONE",
+        "missing_handling": "DROP_ROW",
         "missing_impute_with": "MODE",
         "dummy_clip": "MAX_NB_CATEGORIES",
         "cumulative_proportion": 0.95,
@@ -522,7 +522,7 @@
         "role": "INPUT",
         "type": "CATEGORY",
         "state": {
-          "userModified": false,
+          "userModified": true,
           "autoModifiedByDSS": false,
           "recordedMeaning": "Text"
         },
@@ -664,7 +664,7 @@
       },
       "VMail_Plan": {
         "category_handling": "DUMMIFY",
-        "missing_handling": "NONE",
+        "missing_handling": "DROP_ROW",
         "missing_impute_with": "MODE",
         "dummy_clip": "MAX_NB_CATEGORIES",
         "cumulative_proportion": 0.95,
@@ -676,7 +676,7 @@
         "role": "INPUT",
         "type": "CATEGORY",
         "state": {
-          "userModified": false,
+          "userModified": true,
           "autoModifiedByDSS": false,
           "recordedMeaning": "Boolean"
         },
