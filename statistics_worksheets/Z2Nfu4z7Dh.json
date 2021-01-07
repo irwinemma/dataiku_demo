@@ -29,16 +29,486 @@
     "type": "worksheet_root",
     "confidenceLevel": 0.95,
     "showConfidenceInterval": false,
-    "cards": [],
+    "cards": [
+      {
+        "type": "bivariate_header",
+        "yColumn": {
+          "name": "VMail_Plan",
+          "type": "CATEGORICAL"
+        },
+        "showMosaicPlot": true,
+        "showHistogram": true,
+        "showScatterPlot": false,
+        "showFrequencyTable": true,
+        "showBoxPlot": true,
+        "showSummary": true,
+        "xColumns": [
+          {
+            "name": "Account_Length",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "Phone",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "VMail_Message",
+            "type": "CONTINUOUS"
+          }
+        ],
+        "cards": [
+          {
+            "type": "column_card",
+            "column": {
+              "name": "Account_Length",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "bivariate_histogram",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "Account_Length",
+                  "type": "CATEGORICAL"
+                },
+                "yColumn": {
+                  "name": "VMail_Plan",
+                  "type": "CATEGORICAL"
+                },
+                "id": "ZEDJfh7"
+              },
+              {
+                "type": "mosaic_plot",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "Account_Length",
+                  "type": "CATEGORICAL"
+                },
+                "yColumn": {
+                  "name": "VMail_Plan",
+                  "type": "CATEGORICAL"
+                },
+                "id": "9SN5uVn"
+              },
+              {
+                "type": "bivariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "spearman": true,
+                  "pearson": true,
+                  "totalCount": true,
+                  "covariance": true,
+                  "kendallTau": true,
+                  "mutualInformation": true,
+                  "completeCount": true
+                },
+                "xColumn": {
+                  "name": "Account_Length",
+                  "type": "CATEGORICAL"
+                },
+                "yColumn": {
+                  "name": "VMail_Plan",
+                  "type": "CATEGORICAL"
+                },
+                "id": "rKpGjPK"
+              },
+              {
+                "type": "bivariate_frequency_table",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "Account_Length",
+                  "type": "CATEGORICAL"
+                },
+                "yColumn": {
+                  "name": "VMail_Plan",
+                  "type": "CATEGORICAL"
+                },
+                "id": "W5qKny6"
+              }
+            ],
+            "id": "sloPhRT"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "Phone",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "bivariate_histogram",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "Phone",
+                  "type": "CATEGORICAL"
+                },
+                "yColumn": {
+                  "name": "VMail_Plan",
+                  "type": "CATEGORICAL"
+                },
+                "id": "5F61lph"
+              },
+              {
+                "type": "mosaic_plot",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "Phone",
+                  "type": "CATEGORICAL"
+                },
+                "yColumn": {
+                  "name": "VMail_Plan",
+                  "type": "CATEGORICAL"
+                },
+                "id": "2fm6UbB"
+              },
+              {
+                "type": "bivariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "spearman": true,
+                  "pearson": true,
+                  "totalCount": true,
+                  "covariance": true,
+                  "kendallTau": true,
+                  "mutualInformation": true,
+                  "completeCount": true
+                },
+                "xColumn": {
+                  "name": "Phone",
+                  "type": "CATEGORICAL"
+                },
+                "yColumn": {
+                  "name": "VMail_Plan",
+                  "type": "CATEGORICAL"
+                },
+                "id": "MM2Yuq0"
+              },
+              {
+                "type": "bivariate_frequency_table",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "Phone",
+                  "type": "CATEGORICAL"
+                },
+                "yColumn": {
+                  "name": "VMail_Plan",
+                  "type": "CATEGORICAL"
+                },
+                "id": "MeaG5dB"
+              }
+            ],
+            "id": "SSCq5E5"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "VMail_Message",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "bivariate_box_plot",
+                "maxValues": 5,
+                "groupOthers": true,
+                "binningMode": "AUTO",
+                "customBinningBoundaries": [],
+                "xColumn": {
+                  "name": "VMail_Message",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "VMail_Plan",
+                  "type": "CATEGORICAL"
+                },
+                "id": "oQjkjw4"
+              },
+              {
+                "type": "bivariate_histogram",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "VMail_Message",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "VMail_Plan",
+                  "type": "CATEGORICAL"
+                },
+                "id": "eFTv9G4"
+              },
+              {
+                "type": "mosaic_plot",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "VMail_Message",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "VMail_Plan",
+                  "type": "CATEGORICAL"
+                },
+                "id": "4v5yVIW"
+              },
+              {
+                "type": "bivariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "spearman": true,
+                  "pearson": true,
+                  "totalCount": true,
+                  "covariance": true,
+                  "kendallTau": true,
+                  "mutualInformation": true,
+                  "completeCount": true
+                },
+                "xColumn": {
+                  "name": "VMail_Message",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "VMail_Plan",
+                  "type": "CATEGORICAL"
+                },
+                "id": "XH41Qsi"
+              },
+              {
+                "type": "bivariate_frequency_table",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "VMail_Message",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "VMail_Plan",
+                  "type": "CATEGORICAL"
+                },
+                "id": "ZraZHcB"
+              }
+            ],
+            "id": "MNJamic"
+          }
+        ],
+        "id": "ClNwQxM"
+      },
+      {
+        "type": "bivariate_header",
+        "yColumn": {
+          "name": "Day_Mins",
+          "type": "CONTINUOUS"
+        },
+        "showMosaicPlot": true,
+        "showHistogram": true,
+        "showScatterPlot": true,
+        "showFrequencyTable": true,
+        "showBoxPlot": true,
+        "showSummary": true,
+        "xColumns": [
+          {
+            "name": "Account_Length",
+            "type": "CONTINUOUS"
+          }
+        ],
+        "cards": [
+          {
+            "type": "column_card",
+            "column": {
+              "name": "Account_Length",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "scatter_plot",
+                "symbolSize": 4,
+                "xColumn": {
+                  "name": "Account_Length",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "Day_Mins",
+                  "type": "CONTINUOUS"
+                },
+                "id": "hF5N74M"
+              },
+              {
+                "type": "bivariate_box_plot",
+                "maxValues": 5,
+                "groupOthers": true,
+                "binningMode": "AUTO",
+                "customBinningBoundaries": [],
+                "xColumn": {
+                  "name": "Account_Length",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "Day_Mins",
+                  "type": "CONTINUOUS"
+                },
+                "id": "5tpDtMZ"
+              },
+              {
+                "type": "bivariate_histogram",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "Account_Length",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "Day_Mins",
+                  "type": "CONTINUOUS"
+                },
+                "id": "E3EDZ0I"
+              },
+              {
+                "type": "mosaic_plot",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "Account_Length",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "Day_Mins",
+                  "type": "CONTINUOUS"
+                },
+                "id": "bXukAgL"
+              },
+              {
+                "type": "bivariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "spearman": true,
+                  "pearson": true,
+                  "totalCount": true,
+                  "covariance": true,
+                  "kendallTau": true,
+                  "mutualInformation": true,
+                  "completeCount": true
+                },
+                "xColumn": {
+                  "name": "Account_Length",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "Day_Mins",
+                  "type": "CONTINUOUS"
+                },
+                "id": "U4ACa2V"
+              },
+              {
+                "type": "bivariate_frequency_table",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "Account_Length",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "Day_Mins",
+                  "type": "CONTINUOUS"
+                },
+                "id": "d9Pbflb"
+              }
+            ],
+            "id": "vOHRNSP"
+          }
+        ],
+        "id": "CetO0aq"
+      }
+    ],
     "id": "TJWGjs5"
   },
   "name": "Worksheet",
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1610038589456
+    "lastModifiedOn": 1610038761443
   },
   "creationTag": {
     "versionNumber": 0,
